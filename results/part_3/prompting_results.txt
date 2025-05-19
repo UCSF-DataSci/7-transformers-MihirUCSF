@@ -1,0 +1,108 @@
+# Prompt Engineering Results
+
+## Question: What foods should be avoided by patients with gout?
+
+### zero-shot response:
+Question: What foods should be avoided by patients with gout? Answer: Anything with a high salt content. Anything with high fat content. Everything with a low sugar content.Anything with a lot of fat. Anything high in sugar. Anything that is high in fat and low in protein.
+
+### one-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. What foods should be avoided by patients with gout? Gout sufferers should avoid foods that contain high levels of sugar, salt, and fat. Gout patients should also avoid foods high in salt and high in fat.
+
+### few-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Gout is diagnosed through physical examination, medical history, blood tests for uric acid levels, and joint fluid analysis to look for urate crystals.
+
+--------------------------------------------------
+
+## Question: What medications are commonly prescribed for gout?
+
+### zero-shot response:
+Question: What medications are commonly prescribed for gout? Answer: There are a number of medications that can be used to treat gout. For more information on gout, go to: http://www.gout.org/gout-treatment-medications.
+
+### one-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. What medications are commonly prescribed for gout? Follow CNN Living on Facebook and Twitter to stay up to date on the latest news in the U.S.
+
+### few-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Gout is diagnosed through physical examination, medical history, blood tests for uric acid levels, and joint fluid analysis to look for urate crystals.
+
+--------------------------------------------------
+
+## Question: How can gout flares be prevented?
+
+### zero-shot response:
+How can gout flares be prevented? What are the best ways to prevent them? How do we prevent them in the first place? What can we do to prevent gout flare-ups in the future? How can we prevent these flares in the present day? What do we do now?
+
+### one-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Gout flares can be prevented by taking steps to prevent gout flares in the first place. For more information on gout, visit gout.com.
+
+### few-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Gout is diagnosed through physical examination, medical history, blood tests for uric acid levels, and joint fluid analysis to look for urate crystals.
+
+--------------------------------------------------
+
+## Question: Is gout related to diet?
+
+### zero-shot response:
+Question: Is gout related to diet? Answer: Yes. Gout is a disease of the body that affects the bones and joints. It can also be caused by a lack of exercise or a bad diet. For more information on gout, visit gout.org.
+
+### one-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Is gout related to diet? Gout is a disease of the joints, not of the body. Gout can be treated with medication and/or lifestyle changes.
+
+### few-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Gout is diagnosed through physical examination, medical history, blood tests for uric acid levels, and joint fluid analysis to look for urate crystals.
+
+--------------------------------------------------
+
+## Question: Can gout be cured permanently?
+
+### zero-shot response:
+Question: Can gout be cured permanently? answer: Yes. Question: Is it possible to cure gout permanently? Answer: Yes, but it's not possible to completely cure it. Questions: Is there a cure for gout? Yes, there is a cure. Are you sure?
+
+### one-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Can gout be cured permanently? Gout is a chronic disease that can be treated with medication. Gout sufferers should see their doctor at least once a year.
+
+### few-shot response:
+Gout symptoms include sudden severe pain, swelling, redness, and tenderness in joints, often the big toe. Gout is diagnosed through physical examination, medical history, blood tests for uric acid levels, and joint fluid analysis to look for urate crystals.
+
+--------------------------------------------------
+
+## Scores
+
+```
+question,zero_shot,one_shot,few_shot
+what_foods_shou,0.00,0.00,0.00
+what_medication,0.00,0.00,0.00
+how_can_gout_fl,0.00,0.00,0.00
+is_gout_related,0.17,0.00,0.00
+can_gout_be_cur,0.00,0.40,0.00
+
+average,0.03,0.08,0.00
+best_method,one_shot
+```
+
+## Interpretation and Limitations
+
+### Summary of Results
+
+In this experiment, I compared three prompting techniques (zero-shot, one-shot, and few-shot) on medical questions related to gout. The best performing technique was **one-shot prompting** with an average score of 0.08.
+
+### Key Findings
+
+1. Overall performance was poor across all prompting techniques, with very low keyword matching scores.
+2. One-shot prompting showed slight improvement for certain questions, particularly about whether gout can be cured.
+3. Few-shot prompting did not improve performance despite providing more examples.
+
+### Limitations
+
+The experiment has several significant limitations:
+
+1. **Model Selection**: I was only able to use the facebook/bart-large-cnn model due to limitations of the free Hugging Face API access. This model was primarily trained to summarize news articles, not to answer medical questions. More specialized models like PubMedBERT or Bio_ClinicalBERT would likely produce better results but were not accessible.
+
+2. **Evaluation Method**: The keyword-based evaluation is simplistic and doesn't capture nuance or alternative phrasings that might be medically accurate but use different terminology.
+
+3. **Data Quality**: The poor performance likely reflects the mismatch between the model's training and the specialized medical domain rather than the effectiveness of different prompting techniques themselves.
+
+4. **Sample Size**: The experiment only used five questions about a single medical condition (gout), which limits the generalizability of the findings.
+
+### Conclusion
+
+While one-shot prompting performed marginally better in this experiment, the overall low scores suggest that the underlying model's capabilities matter more than the prompting technique when dealing with specialized domains like healthcare. 
