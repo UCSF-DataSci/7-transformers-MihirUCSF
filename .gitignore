@@ -21,6 +21,9 @@ wheels/
 *.egg
 
 # Jupyter Notebook
+.jupyter/
+.ipynb_checkpoints/
+*-checkpoint.ipynb
 .ipynb_checkpoints
 
 # Virtual Environment
@@ -68,3 +71,19 @@ wandb/
 # Keep empty directories
 !.gitkeep
 07/
+
+# API Keys and Secrets
+*.env
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Large data files
+data/raw/*
+!data/raw/.gitkeep
+*.csv
+*.parquet
+*.tsv
