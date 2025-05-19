@@ -1,0 +1,14 @@
+--- Model Complexity Analysis ---
+      Model  Parameters  Cross-Validation Accuracy  Standard Deviation  Inference Time (ms)
+  Simple NN       26433                   0.881135            0.086947             0.602300
+    Deep NN       59617                   0.852026            0.085456             0.577556
+Residual NN      229889                   0.824826            0.082585             0.604228
+
+--- Detailed Parameters ---
+Simple NN parameters: 26433
+Deep NN parameters: 59617
+Residual NN parameters: 229889
+
+Best model based on accuracy: Simple NN
+Most efficient model (accuracy per 1000 parameters): Simple NN
+Most time-efficient model (accuracy/inference time): Deep NN

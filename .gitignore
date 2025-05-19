@@ -56,11 +56,15 @@ models/*.pth
 data/processed/*
 !data/processed/.gitkeep
 
+# Results directories - allow txt files
 results/part_1/*
 results/part_2/*
 results/part_3/*
 results/part_4/*
-!results/part_1/.gitkeep
+!results/part_1/*.txt
+!results/part_2/*.txt
+!results/part_3/*.txt
+!results/part_4/*.txt
 !results/part_2/.gitkeep
 !results/part_3/.gitkeep
 !results/part_4/.gitkeep
